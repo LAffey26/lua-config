@@ -20,6 +20,6 @@ map('n', '<S-F5>', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]], 
 map('n', '<S-F4>', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], default_opts)
 -- ФАЙЛЫ
 -- <F4> Дерево файлов. Для иконок следует установить Nerd Font
-map('n', '<F4>', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', default_opts)
+map('n', '<C-n>', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', default_opts)
 --<mm> запуск Python файла 
 map('n','mm',':w<CR>:term python %<CR>',default_opts)
