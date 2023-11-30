@@ -45,3 +45,6 @@ cmp.setup({
     { name = "path" }, -- file system paths
   }),
 })
+  
+local icons = require "nvim-nonicons"
+  icons.get("file")

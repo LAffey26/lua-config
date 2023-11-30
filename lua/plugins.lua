@@ -1,5 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
+
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -40,6 +41,15 @@ return require('packer').startup(function(use)
   end, }
   --- popup окошки
   use 'nvim-lua/popup.nvim'
+  ---Шрифт
+  use 'yamatsum/nvim-nonicons'
+
+  --- if use nvim-web-devicons
+  use {'yamatsum/nvim-nonicons',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function() 
+      require('nvim-nonicons').setup {}
+      end,} 
   ---------------------------------------------------------
   -- ПОИСК
   ---------------------------------------------------------
@@ -47,9 +57,13 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} },
       config = function() 
-      require'telescope'.setup {}
+      require("telescope").setup({
+        defaults = {
+        prompt_prefix = "  " .. icons.get("telescope") .. "  ",
+        selection_caret = " ❯ ",
+        entry_prefix = "   ",},
+        })
   end, }
-    
   ---------------------------------------------------------
   -- КОД
   ---------------------------------------------------------
