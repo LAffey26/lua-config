@@ -24,7 +24,6 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find s
 
 keymap.set('n', '<leader>w', ':w<CR>', {desc = 'Saving  file changes'})
 keymap.set('n', '<leader>q', ':q!<CR>', {desc = 'Exiting the nvim editor'})
-keymap.set('n', '<leader>s', ':so %<CR>', {desc = 'Introduction of changes config'})
 
 
 
