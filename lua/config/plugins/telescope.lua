@@ -1,5 +1,5 @@
 return {
- -- the plugin requires `ripgrab` to work
+ -- the plugin requires `ripgrep` to work
  "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
   dependencies = {
