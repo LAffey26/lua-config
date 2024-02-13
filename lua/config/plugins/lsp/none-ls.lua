@@ -1,7 +1,7 @@
 return {
   "nvimtools/none-ls.nvim", -- configure formatters & linters
   lazy = true,
-  -- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
+  event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
   dependencies = {
     "jay-babu/mason-null-ls.nvim",
   },
@@ -36,7 +36,7 @@ return {
       -- setup formatters & linters
       sources = {
         --  to disable file types use
-        --  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
+         -- "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
         formatting.prettier.with({
           extra_filetypes = { "svelte" },
         }), -- js/ts formatter
